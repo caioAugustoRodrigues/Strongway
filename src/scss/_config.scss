@@ -1,0 +1,43 @@
+$primary-color: #272727;
+$secondary-color: #ff652f;
+$text-color: #f3f3f3;
+$font-weight:(
+    "regular": 400,
+    "medium": 600,
+    "bold": 700,
+    "bolder": 900,
+);
+
+@function weight($weightname){
+    @return map-get($font-weight, $weightname );
+};
+
+@mixin hover-secondary {
+    @include transition-ease;
+    
+    &:active, &:hover, &:focus {
+        color: $secondary-color;
+    }
+}
+
+@mixin transition-ease {
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content; 
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content; 
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content; 
+    }
+}
