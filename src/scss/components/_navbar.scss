@@ -1,0 +1,46 @@
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    top: 0;
+    background: $text-color;
+    color: $primary-color;
+
+
+    .navbar {
+        flex: 1 1 100%;
+        display: flex;
+        color: $primary-color;
+        margin-right: 30rem;
+        
+        &__logo {
+            margin: 5rem 3rem 2rem 20rem;
+            flex: 1;
+        }
+
+        &__items {
+            flex: 10;
+            display: flex;
+
+            &__item {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                border-left: 1px solid $secondary-color;
+                padding-bottom: 2rem;
+
+                &__link {
+                    color: $primary-color;
+                }
+
+                &:last-child {
+                    border-right: 1px solid $secondary-color;
+                }
+            }
+        }
+    }
+}
