@@ -24,9 +24,21 @@ main {
         &__items {
             &__item {
                 font-size: 1rem;
-                color: $secondary-color--light;
                 padding: 1rem;
                 border-bottom: 1px solid $secondary-color--light;
+
+                &__link {
+                    color: rgba($color: $secondary-color, $alpha: .85);
+                    @include transition-ease;
+
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+
+                &:last-child {
+                    padding-bottom: 1.5rem;
+                }
             }
         }
     }
@@ -41,7 +53,7 @@ main {
         &__p {
             margin: 1rem;
             line-height: 1.3rem;
-            color: $secondary-color;
+            color: rgba($color: $secondary-color, $alpha: .85);
         }
 
         &__button {
@@ -50,9 +62,15 @@ main {
             background: $button-red;
             color: $primary-color;
             font-weight: weight(medium);
-            padding: .75rem 2rem;
-            margin: 0 0 2rem 1rem;
+            padding: .9rem 2rem;
+            margin: .5rem 0 2rem 1rem;
             border-radius: .3rem;
+            cursor: pointer;
+            @include transition-ease;
+
+            &:hover {
+                background: $text-color;
+            }
         }
     }
 }
